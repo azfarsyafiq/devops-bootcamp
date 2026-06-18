@@ -1,0 +1,20 @@
+[
+    [
+        "nat-135d7e04bdd6b3176",
+        "deleted"
+    ],
+    [
+        "nat-093feea5415ac2ef1",
+        "deleted"
+    ],
+    [
+        "nat-02bc9a76a03458268",
+        "available"
+    ]
+]
+[
+    "54.169.193.46"
+]
+[
+    "762825106974.dkr.ecr.ap-southeast-1.amazonaws.com/devops-bootcamp/azfarsyafiq"
+]
