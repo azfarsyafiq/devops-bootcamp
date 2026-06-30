@@ -1,0 +1,2 @@
+github+custom domain = www.yelight.cc
+private-site custom subdomain=resume.yelight.cc
