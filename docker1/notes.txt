@@ -1,0 +1,8 @@
+Docker version 29.4.2, build 055a478
+IMAGE                   ID             DISK USAGE   CONTENT SIZE   EXTRA
+alpine:latest           d529dd0c6e55       8.42MB             0B        
+hello-world:latest      e2ac70e7319a       10.1kB             0B        
+infratify/card:latest   735347b6b46d       53.4MB             0B        
+nginx:alpine            ea51152ef8c4       62.2MB             0B        
+nginx:latest            9f33606b3685        161MB             0B        
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
