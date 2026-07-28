@@ -1,0 +1,10 @@
+762825106974.dkr.ecr.ap-southeast-1.amazonaws.com/devops-bootcamp/azfarsyafiq
+
+DRIVER    VOLUME NAME
+local     me
+
+NETWORK ID     NAME      DRIVER    SCOPE
+01b1fae3bc53   arena     bridge    local
+462c8545cb7d   bridge    bridge    local
+87fe8e6ed18d   host      host      local
+8f6f7c50d4ad   none      null      local
