@@ -16,17 +16,18 @@ data "aws_ssm_parameter" "token" {
   name = "/devops-bootcamp-2026/tunnel-token"
 }
 
-module "my_server_public" {
+module "my_server_private" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 6.0"
 
-  name                   = "tf-server-public"
+  name                   = "tf-server-private"
   ami                    = data.aws_ami.my_ami.id
   instance_type          = "t3.micro"
-  subnet_id              = module.my_vpc.public_subnets[0]
+  subnet_id              = module.my_vpc.private_subnets[0]
+  vpc_security_group_ids = [module.my_sg.id]
   iam_instance_profile   = data.aws_iam_instance_profile.my_ssm_profile.name
 
   user_data = templatefile("userdata-tunnel.sh", {
-  tunnel_token = data.aws_ssm_parameter.token.value
-})
+    tunnel_token = data.aws_ssm_parameter.token.value
+  })
 }
