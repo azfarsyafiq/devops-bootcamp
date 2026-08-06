@@ -17,7 +17,7 @@ module "my_rackula_server" {
   ami                    = data.aws_ami.my_ami.id
   instance_type          = "t3.micro"
   subnet_id              = module.my_vpc.public_subnets[0]
-  vpc_security_group_ids = [module.my_sg.security_group_id]
+  vpc_security_group_ids = [module.my_sg.id]
   create_security_group  = false
 
   create_iam_instance_profile = true
