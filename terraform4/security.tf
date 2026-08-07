@@ -2,16 +2,15 @@ module "my_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "~> 6.0"
 
-  name            = "tf-vpc-sg"
-  use_name_prefix = false
-  vpc_id          = module.my_vpc.vpc_id
+  name   = "tf4-rackula-sg"
+  vpc_id = module.my_vpc.vpc_id
 
   ingress_rules = {
-    http = {
+    rackula = {
       cidr_ipv4   = "0.0.0.0/0"
       ip_protocol = "tcp"
-      from_port   = 80
-      to_port     = 80
+      from_port   = 8080
+      to_port     = 8080
     }
   }
 
@@ -19,5 +18,5 @@ module "my_sg" {
     all = { cidr_ipv4 = "0.0.0.0/0", ip_protocol = "-1" }
   }
 
-  tags = { Name = "tf-vpc-sg" }
+  tags = { Name = "rackula-sg" }
 }
