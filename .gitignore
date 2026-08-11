@@ -1,6 +1,21 @@
 # Created by https://www.toptal.com/developers/gitignore/api/ssh,linux,windows,dotenv
 # Edit at https://www.toptal.com/developers/gitignore?templates=ssh,linux,windows,dotenv
 
+### Terraform ###
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
 ### dotenv ###
 .env
 
